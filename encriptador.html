@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styleRypt.css">
+    <link rel="stylesheet" href="./reset.css">
+    <title>Encriptador</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+   
+    
+</head>
+<body>
+    
+    <header>
+        <a href="./encriptador.html"><img src="./imagen/Vector.png" alt="" class="logo"></a>
+        
+        
+    </header>
+
+    <main>
+        <section>
+            <textarea id="areaDeTexto" cols="30" rows="10">Ingrese el texto aquí</textarea>
+            <div>
+                <h6 class="datos" ><img src="./imagen/exclamacion.png" alt=""> Solo letras minusculas y sin acento</h6>
+            </div>
+            <div class="botones">
+                <button id="crypt">Encriptar</button>
+                <button id="desencriptar">Desencriptar</button><br>
+            </div>
+        </section>
+
+        <section class="sect">
+            <textarea id="mensaje" cols="30" rows="10" > Ningún mensaje fue encontrado Ingresa el texto que desees encriptar o desencriptar.</textarea>
+            
+            <button id="copiar">Copiar</button>
+            
+        </section>
+        
+    </main>
+    
+    
+    
+    
+
+    
+    <script>
+
+        function imprimir(frase){
+            document.write(frase);
+            
+            
+        }
+
+        function saltoDeLinea(){
+            document.write("<br><br><hr><br>");   
+        }        
+
+        
+        function encriptar(){
+            var palabra=inpu.value;
+            var vocales="aeiou"
+            
+            palabra = palabra.replace(/e/g, "enter")
+                        .replace(/i/g, "imes")
+                        .replace(/a/g, "ai")
+                        .replace(/o/g, "ober")
+                        .replace(/u/g, "ufat");
+            inpu2.value=palabra;
+        }
+        function desencriptar(){
+            var palabra=inpu.value;
+            var vocales="aeiou"
+            
+            palabra = palabra.replace(/enter/g, "e")
+                        .replace(/imes/g, "i")
+                        .replace(/ai/g, "a")
+                        .replace(/ober/g, "o")
+                        .replace(/ufat/g, "u");
+            inpu2.value=palabra;
+
+        }
+        function copiartexto(){
+            var input = document.getElementById("mensaje");
+            input.select();
+            document.execCommand("copy");
+            
+        }
+        
+
+        
+            
+
+       
+            
+        var inpu=document.getElementById("areaDeTexto");
+        var boton= document.getElementById("crypt");
+        var boton2=document.getElementById("desencriptar");
+        var inpu2=document.getElementById("mensaje");
+        var btncopiar=document.getElementById("copiar")
+       boton.onclick=(encriptar);
+        boton2.onclick=(desencriptar);
+        btncopiar.onclick=(copiartexto);
+
+        
+        
+        
+
+        
+    </script>
+</body>
+</html>
