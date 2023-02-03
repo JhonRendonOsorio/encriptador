@@ -43,11 +43,6 @@
         
     </main>
     
-    
-    
-    
-
-    
     <script>
 
         function imprimir(frase){
@@ -71,6 +66,7 @@
                         .replace(/o/g, "ober")
                         .replace(/u/g, "ufat");
             inpu2.value=palabra;
+            inpu2.style.background="none";
         }
         function desencriptar(){
             var palabra=inpu.value;
@@ -102,15 +98,11 @@
         var boton2=document.getElementById("desencriptar");
         var inpu2=document.getElementById("mensaje");
         var btncopiar=document.getElementById("copiar")
-       boton.onclick=(encriptar);
+        boton.onclick=(encriptar);
         boton2.onclick=(desencriptar);
         btncopiar.onclick=(copiartexto);
 
-        
-        
-        
-
-        
     </script>
+
 </body>
 </html>
